@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <article data-testid="test-profile-card" class="profile-card">
+            <figure class="profile-avatar-container">
+                <img 
+                    src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" 
+                    alt="Headshot of Tkachuk Zabi, a Frontend Developer" 
+                    data-testid="test-user-avatar"
+                    class="profile-avatar"
+                >
+            </figure>
+
+            <div class="profile-content">
+                <header>
+                    <h2 data-testid="test-user-name">Tkachuk Zabi</h2>
+                    <p data-testid="test-user-bio">
+                        Building inclusive digital experiences with a focus on accessibility and modern frontend development.
+                    </p>
+                </header>
+
+                <div class="time-container">
+                    <span class="label">Current Epoch Time (ms):</span>
+                    <p data-testid="test-user-time" aria-live="polite" class="time-display"></p>
+                </div>
+
+                <nav data-testid="test-user-social-links" class="social-links">
+                    <a href="https://github.com" data-testid="test-user-social-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com" data-testid="test-user-social-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://twitter.com" data-testid="test-user-social-twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </nav>
+
+                <div class="lists-wrapper">
+                    <section>
+                        <h3>Hobbies</h3>
+                        <ul data-testid="test-user-hobbies">
+                            <li>Digital Photography</li>
+                            <li>Open Source Contribution</li>
+                            <li>Hiking</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Dislikes</h3>
+                        <ul data-testid="test-user-dislikes">
+                            <li>Slow Internet</li>
+                            <li>Unstructured Data</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
